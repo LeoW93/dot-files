@@ -181,6 +181,8 @@ export PATH="~/Library/Python/3.7/bin:$PATH"
 export PATH="/Users/leowheelan/Library/Android/sdk/platform-tools:$PATH"
 export PATH="/Users/leowheelan/Downloads/apache-maven-3.6.3/bin:$PATH"
 
+export GOPATH="~/go"
+
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-12.jdk/Contents/Home"
 eval "$(direnv hook zsh)"
 alias gls='git log --oneline --graph --decorate --abbrev-commit --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(yellow)- %an%C(reset)%C(red)%d%C(reset)"'
