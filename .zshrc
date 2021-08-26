@@ -87,6 +87,7 @@ npm
 nvm
 aws
 nvm-auto-use
+zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -181,7 +182,8 @@ export PATH="~/Library/Python/3.7/bin:$PATH"
 export PATH="/Users/leowheelan/Library/Android/sdk/platform-tools:$PATH"
 export PATH="/Users/leowheelan/Downloads/apache-maven-3.6.3/bin:$PATH"
 
-export GOPATH="~/go"
+export GOPATH="/Users/leowheelan/go"
+export PATH=$PATH:$(go env GOPATH)/bin
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-12.jdk/Contents/Home"
 eval "$(direnv hook zsh)"
