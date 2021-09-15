@@ -181,7 +181,7 @@ export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH="~/Library/Python/3.7/bin:$PATH"
 export PATH="/Users/leowheelan/Library/Android/sdk/platform-tools:$PATH"
 export PATH="/Users/leowheelan/Downloads/apache-maven-3.6.3/bin:$PATH"
-
+export PATH="./node_modules/.bin:$PATH"
 export GOPATH="/Users/leowheelan/go"
 export PATH=$PATH:$(go env GOPATH)/bin
 
@@ -235,6 +235,9 @@ alias kdd="kd deployment"
 alias kdp="kd pod"
 alias kpsql="kubectl run --rm -it postgres-temp --image=postgres --command -- /bin/bash"
 
+if [ -r ~/.zshrc ]; then echo 'export GPG_TTY=$(tty)' >> ~/.zshrc; \
+  else echo 'export GPG_TTY=$(tty)' >> ~/.zprofile; fi
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/leowheelan/.nvm/versions/node/v12.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/leowheelan/.nvm/versions/node/v12.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
@@ -250,3 +253,4 @@ alias kpsql="kubectl run --rm -it postgres-temp --image=postgres --command -- /b
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 ## UNCOMMENT THIS FOR ZSH_THEME="powerlevel10k/powerlevel10k"
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export GPG_TTY=$(tty)
